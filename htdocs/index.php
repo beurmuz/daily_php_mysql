@@ -12,8 +12,13 @@
         <li><a href="index.php?id=JavaScript">JavaScript</a></li>
     </ol>
     <h2>
-        <?php echo $_GET['id']; ?>
+        <?php 
+            echo $_GET['id']; 
+        ?>
     </h2>
+    <?php
+        echo file_get_contents("data/".$_GET['id']);
+    ?>
     cus I was moving way up no ceiling
     I grabbed a chance heaven sent
     it ain’t been the same ever since
