@@ -47,14 +47,17 @@
         ?>
     </ol>
     <a href = "create.php">create</a>
-    <?php
-        if(isset($_GET['id'])) {
-            ?> 
-            <!-- a태그는 id값이 있어야만 출력됨 -->
-            <a href="update.php?id=<?=$_GET['id']; ?>">update</a>
-            <?php
-        }
-        ?>
+    <form action = "create_process.php" method="post">
+        <p>
+            <input type="text" name="title" placeholder="Title" />
+        </p>
+        <p>
+            <textarea name="description" placeholder="Description"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Submit"/>
+        </p>
+    </form>
     <h2>
         <?php 
             print_title();
